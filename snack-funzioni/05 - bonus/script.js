@@ -9,10 +9,13 @@ const name = 'Mario';
 
 
 // Dichiara la funzione qui.
-
+function greet(str) {
+    const currentHour = new Date().getHours();
+    return `${currentHour < 13 ? 'Buongiorno' : currentHour < 17 ? 'Buon pomeriggio' : 'Buonasera'} ${str}.`;
+}
 
 // Invoca la funzione qui e stampa il risultato in console
-
+console.log(greet(name));
 
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
